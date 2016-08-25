@@ -1,0 +1,21 @@
+{
+  "name": "jsonkv",
+  "version": "1.0.0",
+  "email": "tangkhaiphuong@gmail.com",
+  "author": "Tăng Khải Phương",
+  "main": "app.js",
+  "dependencies": {
+    "lodash": "4.14.1"
+  },
+  "devDependencies": {
+    "gulp-sourcemaps": "1.6.0",
+    "gulp-typescript": "2.13.6",
+    "gulp": "^3.6.2",
+    "gulp-tsc": "^0.10.1",
+    "gulp-file": "0.3.0",
+    "gulp-shell": "^0.4.2",
+    "gulp-tslint": "^6.0.2",
+    "tslint": "3.14.0",
+    "run-sequence": "^1.1.1"
+  }
+}

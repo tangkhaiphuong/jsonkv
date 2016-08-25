@@ -1,0 +1,16 @@
+{
+  "say": "Hello",
+  "name": {
+    "first": "Phuong",
+    "last": "Tang",
+    "address": {
+      "street": "362. Hai Ba Trung",
+      "ward": "Tan Dinh"
+    },
+    "contact": [
+      {
+        "cellphone": "xxx yyy zzz"
+      }
+    ]
+  }
+}
