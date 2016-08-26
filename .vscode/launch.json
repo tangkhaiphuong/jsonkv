@@ -5,7 +5,7 @@
             "name": "Debug",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/src/app.ts",
+            "program": "${workspaceRoot}/src/example.ts",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",

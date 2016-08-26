@@ -22,12 +22,12 @@ function toKv(source, delimitation) {
     if (source === null || source === undefined) {
         return null;
     }
-    else if (typeof source === "string" || typeof source === "number") {
+    else if (typeof source === "string" || typeof source === "number" || typeof source === "boolean") {
         return source;
     }
     let result = {};
     let traveler = (node, path) => {
-        if (typeof node === "string" || typeof node === "number") {
+        if (typeof node === "string" || typeof node === "number" || typeof node === "boolean") {
             result[path] = node;
         }
         else if (isArrayLike(node)) {
@@ -47,7 +47,7 @@ function toKv(source, delimitation) {
                     newPath = "";
                 }
                 newPath = newPath.concat(key);
-                if (typeof value === "string" || typeof value === "number") {
+                if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") {
                     result[newPath] = node[key];
                 }
                 else if (isArrayLike(value)) {
@@ -80,7 +80,7 @@ function toJson(source, delimitation) {
     if (source === null || source === undefined) {
         return null;
     }
-    else if (typeof source === "string" || typeof source === "number") {
+    else if (typeof source === "string" || typeof source === "number" || typeof source === "boolean") {
         return source;
     }
     let keys = Object.keys(source);

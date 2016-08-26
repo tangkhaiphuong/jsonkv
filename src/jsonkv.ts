@@ -23,13 +23,13 @@ export function toKv(source: Object, delimitation?: string): any {
     }
     if (source === null || source === undefined) {
         return null;
-    } else if (typeof source === "string" || typeof source === "number") {
+    } else if (typeof source === "string" || typeof source === "number" || typeof source === "boolean") {
         return source;
     }
 
     let result: { [key: string]: any } = {};
     let traveler = (node: any, path: string): any => {
-        if (typeof node === "string" || typeof node === "number") {
+        if (typeof node === "string" || typeof node === "number" || typeof node === "boolean") {
             result[path] = node;
         } else if (isArrayLike(node)) {
             for (let i = 0; i < node.length; ++i) {
@@ -46,7 +46,7 @@ export function toKv(source: Object, delimitation?: string): any {
                     newPath = "";
                 }
                 newPath = newPath.concat(key);
-                if (typeof value === "string" || typeof value === "number") {
+                if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") {
                     result[newPath] = node[key];
                 } else if (isArrayLike(value)) {
                     for (let i = 0; i < value.length; ++i) {
@@ -77,7 +77,7 @@ export function toJson(source: { [key: string]: any }, delimitation?: string): a
     }
     if (source === null || source === undefined) {
         return null;
-    } else if (typeof source === "string" || typeof source === "number") {
+    } else if (typeof source === "string" || typeof source === "number" || typeof source === "boolean") {
         return source;
     }
 
